@@ -9,7 +9,7 @@ import contract.IView;
 /**
  * The Class Controller.
  */
-public class Controller implements IController {
+public class Controller implements IController { //test commit
 
 	/** The view. */
 	private IView		view;
