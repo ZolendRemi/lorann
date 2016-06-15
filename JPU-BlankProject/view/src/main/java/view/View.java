@@ -10,7 +10,11 @@ import contract.IModel;
 import contract.IView;
 
 /**
+<<<<<<< HEAD
  * The Class View.
+=======
+ * The Class View. lol
+>>>>>>> branch 'master' of https://github.com/ZolendRemi/lorann.git
  *
  * @author Jean-Aymeric Diet
  */
@@ -37,7 +41,7 @@ public class View implements IView, Runnable {
 	 *          the key code
 	 * @return the controller order
 	 */
-	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
+	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) { //réccupére les keyevent
 		switch (keyCode) {
 			case KeyEvent.VK_G:
 				return ControllerOrder.English;

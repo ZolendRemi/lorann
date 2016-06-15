@@ -161,6 +161,7 @@ class ViewFrame extends JFrame implements KeyListener {
 	 */
 	public void keyPressed(final KeyEvent e) {
 		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
+		//appel le controller sur la vue qui va appeler la méthode orderperform du contrôleur. Elle va retourné le code ascii de la touche appuyé traduit par la méthode keycodetocontrolorder
 	}
 
 	/*

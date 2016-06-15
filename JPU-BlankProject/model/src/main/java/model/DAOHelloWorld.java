@@ -63,7 +63,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#find(int)
 	 */
 	@Override
-	public HelloWorld find(final int id) {
+	public HelloWorld find(final int id) { //  On réccupére la chaine de caractère avec l'id
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
@@ -88,7 +88,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 * @see model.DAOEntity#find(java.lang.String)
 	 */
 	@Override
-	public HelloWorld find(final String key) {
+	public HelloWorld find(final String key) { // On réccupére la chaine de caractère avec le code caractère
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
@@ -97,7 +97,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			call.setString(1, key);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
-			if (resultSet.first()) {
+			if (resultSet.first()) { // Crée un objet helloworld de type model
 				helloWorld = new HelloWorld(resultSet.getInt("id"), key, resultSet.getString("message"));
 			}
 			return helloWorld;

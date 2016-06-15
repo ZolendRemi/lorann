@@ -40,7 +40,7 @@ public class Model extends Observable implements IModel {
 	private void setMessage(final String message) {
 		this.message = message;
 		this.setChanged();
-		this.notifyObservers();
+		this.notifyObservers(); // averti la vue d'une modif
 	}
 
 	/*
@@ -48,10 +48,11 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public void loadMessage(final String key) {
+	public void loadMessage(final String key) { // créer une connextion à la base de donnée de type connexion
 		try {
+			//DAOHelloWorld permet de réccupérer des trucs dans la base
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMessage(daoHelloWorld.find(key).getMessage());
+			this.setMessage(daoHelloWorld.find(key).getMessage()); // Réccupére le message de type helloworld
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

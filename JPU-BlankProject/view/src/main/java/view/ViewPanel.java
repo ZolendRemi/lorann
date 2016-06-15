@@ -54,7 +54,7 @@ class ViewPanel extends JPanel implements Observer {
 	 * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
 	 */
 	public void update(final Observable arg0, final Object arg1) {
-		this.repaint();
+		this.repaint(); // Quand il y a une update il rafraîchit le frame
 	}
 
 	/*

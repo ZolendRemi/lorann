@@ -64,7 +64,7 @@ public class Controller implements IController {
 	 *
 	 * @see contract.IController#orderPerform(contract.ControllerOrder)
 	 */
-	public void orderPerform(final ControllerOrder controllerOrder) {
+	public void orderPerform(final ControllerOrder controllerOrder) { // La vue envoie l'ordre qu'elle reçoit et qui est interprêté ici
 		switch (controllerOrder) {
 			case English:
 				this.model.loadMessage("GB");
