@@ -41,7 +41,7 @@ public class View implements IView, Runnable {
 	 *          the key code
 	 * @return the controller order
 	 */
-	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) { //réccupére les keyevent
+	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) { //Receive a KeyCode
 		switch (keyCode) {
 			case KeyEvent.VK_G:
 				return ControllerOrder.English;
